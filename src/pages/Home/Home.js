@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import HeroImg from './images/banner-img-1.png';
+import HomeHeroImg from './images/banner-img-1.png';
 import GamingOneImg from './images/gaming-img-1.png';
 import GamingTwoImg from './images/gaming-img-2.png';
 import ThreeStarImg from './images/three-star-img.png';
@@ -13,7 +13,7 @@ class Home extends Component {
                     <div className="row">
                         <div className="col-md-12">
                             <div className="div">
-                                <img src={HeroImg} className="img-fluid" alt="Hero-img" />
+                                <img src={HomeHeroImg} className="img-fluid" alt="Hero-img" />
                             </div>
                         </div>
                     </div>
@@ -43,7 +43,7 @@ class Home extends Component {
                                     <li className="list-group-item">Rainbow Six Siege <img src={FourStarImg} alt="star-rating-2" width="50" /></li>
                                     <li className="list-group-item">Call of Duty <img src={FourStarImg} alt="star-rating-3" width="50" /></li>
                                     <li className="list-group-item">Overwatch <img src={ThreeStarImg} alt="star-rating-4" width="40" /></li>
-                                    <li className="list-group-item">Half-Life <img src={ThreeStarImg} alt="star-rating-5" width="40" /></li>
+                                    <li className="list-group-item">Skyrim <img src={ThreeStarImg} alt="star-rating-5" width="40" /></li>
                                 </ul>
                             </div>
                         </div>

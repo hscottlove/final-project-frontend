@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import FeedHeroImg from './images/banner-img-4.png';
+import Halo2PostImg from './images/halo2.jpg';
 
 class Feed extends Component {
     render() {
@@ -7,7 +9,7 @@ class Feed extends Component {
                 <section class="video-hero-section">
                     <div class="row">
                         <div class="col-md-12">
-                            <img src="./images/banner-img-4.png" class="img-fluid test" alt="Hero-img" />
+                            <img src={FeedHeroImg} class="img-fluid test" alt="Hero-img" />
                         </div>
                     </div>
                 </section>
@@ -38,7 +40,7 @@ class Feed extends Component {
                         <div class="row">
                             <div class="col-md-8 offset-md-2">
                                 <div class="card">
-                                    <img src="./images/halo2.jpg" class="card-img-top" alt="Halo 2" />
+                                    <img src={Halo2PostImg} class="card-img-top" alt="Halo 2" />
                                     <div class="card-body">
                                         <h3>Game: Halo 2</h3>
                                         <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit
