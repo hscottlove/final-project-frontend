@@ -23,12 +23,12 @@ class Feed extends Component {
             <form>
               <div class="form-group">
                 <label for="exampleInputName">Game:</label>
-                <input type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp" placeholder="Enter game name" />
+                <input type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp" />
               </div>
-              <div class="form-group">
-                <label for="exampleInputPassword1">Description</label>
-                
-              </div>
+             <div class="form-group">
+                <label for="exampleFormControlTextarea1">Description:</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Share here..."></textarea>
+            </div>
               <button type="submit" class="btn btn-primary">Post</button>
             </form>
           </div>
