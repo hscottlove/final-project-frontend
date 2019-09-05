@@ -42,7 +42,6 @@ class Feed extends Component {
   </div>
 </div>
 
-
                 <section class="video-hero-section">
                     <div class="row">
                         <div class="col-md-12">
@@ -70,7 +69,6 @@ class Feed extends Component {
                         </div>
                     </div>
                 </section>
-
 
                 <section class="feed-section">
                     <div class="container">
