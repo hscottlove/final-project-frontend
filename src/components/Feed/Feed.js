@@ -6,6 +6,43 @@ class Feed extends Component {
     render() {
         return (
             <>
+
+
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Add Post</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <div className="row">
+          <div className="col-md-12">
+            <form>
+              <div class="form-group">
+                <label for="exampleInputName">Game:</label>
+                <input type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp" placeholder="Enter game name" />
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Description</label>
+                
+              </div>
+              <button type="submit" class="btn btn-primary">Post</button>
+            </form>
+          </div>
+        </div> 
+      </div>
+      <div class="modal-footer">
+        {/* <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button> */}
+      </div>
+    </div>
+  </div>
+</div>
+
+
                 <section class="video-hero-section">
                     <div class="row">
                         <div class="col-md-12">
@@ -28,7 +65,7 @@ class Feed extends Component {
                     <div class="container">
                         <div class="row">
                             <div class="col-md-8 offset-md-2 d-flex flex-row-reverse mb-3">
-                                <button type="button" class="btn btn-primary">Add Post  <i class="fas fa-plus-circle"></i></button>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Add Post  <i class="fas fa-plus-circle"></i></button>
                             </div>
                         </div>
                     </div>
