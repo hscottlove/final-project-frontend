@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import VideoHeroImg from './images/banner-img-2.png';
 
 class Videos extends Component {
 render() {
@@ -7,7 +8,7 @@ render() {
             <section class="video-hero-section">
                 <div class="row">
                     <div class="col-md-12">
-                        <img src="./images/banner-img-2.png" class="img-fluid test" alt="Hero-img" />
+                        <img src={VideoHeroImg} class="img-fluid test" alt="Hero-img" />
                     </div>
                 </div>
             </section>
@@ -39,7 +40,7 @@ render() {
                         <div class="col-md-8 offset-md-2 game-demo">
                             <h2>Counter-Strike</h2>
                             <div class="embed-responsive embed-responsive-16by9">
-                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/edYCtaNueQY"
+                                <iframe title="myFrame" class="embed-responsive-item" src="https://www.youtube.com/embed/edYCtaNueQY"
                                     allowfullscreen></iframe>
                             </div>
                         </div>
@@ -49,7 +50,7 @@ render() {
                         <div class="col-md-8 offset-md-2 game-demo">
                             <h2>Fortnite</h2>
                             <div class="embed-responsive embed-responsive-16by9">
-                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/qpKtzf5fXn4"
+                                <iframe title="myFrame" class="embed-responsive-item" src="https://www.youtube.com/embed/qpKtzf5fXn4"
                                     allowfullscreen></iframe>
                             </div>
                         </div>
@@ -60,7 +61,7 @@ render() {
                         <div class="col-md-8 offset-md-2 game-demo">
                             <h2>Call of Duty</h2>
                             <div class="embed-responsive embed-responsive-16by9">
-                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Ou8NazRFCrg"
+                                <iframe title="myFrame" class="embed-responsive-item" src="https://www.youtube.com/embed/Ou8NazRFCrg"
                                     allowfullscreen></iframe>
                             </div>
                         </div>
