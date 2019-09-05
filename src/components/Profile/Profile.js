@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ProfileImg from './images/profile-img.png';
 
 class Profile extends Component {
 render() {
@@ -18,7 +19,7 @@ render() {
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 text-center">
-                            <img src="./images/profile-img.png" alt="profile-img" width="200px" class="img-thumbnail" />
+                            <img src={ProfileImg} alt="profile-img" width="200px" class="img-thumbnail" />
                             <h3>Scott L.</h3>
                         </div>
                     </div>
