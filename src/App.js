@@ -31,8 +31,8 @@ class App extends Component {
   render() {
   return (
   <>
-   <Navbar />
-   
+   <Navbar currentUser={this.state.currentUser} logout={this.logout} />
+   <Routes currentUser={this.state.currentUser} setCurrentUser={this.setCurrentUser} />
    <Footer />
   </>
   );

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { NavLink } from 'react-router-dom';
 import Logo from './images/Logo-w-60.png'
  
@@ -48,7 +48,7 @@ import Logo from './images/Logo-w-60.png'
 //   export default Navbar;
 
 
-  const NavBar = ({ currentUser, logout }) => {
+  const Navbar = ({ currentUser, logout }) => {
     const links = (
       <>
         <li className="nav-item">
@@ -65,15 +65,23 @@ import Logo from './images/Logo-w-60.png'
     
     const authLinks = (
       <>
-        <li className="nav-item">
-          <NavLink className="nav-link" exact to="/profile">Profile</NavLink>
-        </li>
-        <li className="nav-item">
-          <NavLink className="nav-link" to="/contacts">Contacts</NavLink>
-        </li>
-        <li className="nav-item">
-          <NavLink className="nav-link" to="/feed">Feed</NavLink>
-        </li>
+          <li className="nav-item">
+            <NavLink className="nav-link" to="/feed">Feed</NavLink>
+          </li>
+          <li className="nav-item">
+            <NavLink className="nav-link" to="/videos">Videos</NavLink>
+          </li>
+     
+          <li className="nav-item dropdown">
+              <NavLink className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Account
+              </NavLink>
+              <div className="dropdown-menu" aria-labelledby="navbarDropdown">
+                <NavLink className="dropdown-item" to="/profile">Profile</NavLink>
+                <NavLink className="dropdown-item" href="#">Sign Out</NavLink>
+              </div>
+            </li>
+
         <li className="nav-item">
           <span className="nav-link" style={{cursor: 'pointer'}} onClick={logout}>Logout</span>
         </li>
@@ -97,7 +105,7 @@ import Logo from './images/Logo-w-60.png'
     );
   };
   
-  export default NavBar;
+  export default Navbar;
   
  
  
