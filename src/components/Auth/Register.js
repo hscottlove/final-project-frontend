@@ -106,7 +106,7 @@ class Register extends Component {
             </button>
           </div>
         ))}
-        <section id="register" className="col-md-6 offset-md-3">
+        <section id="register" className="col-md-4 offset-md-4">
           <h2 className="mb-4">Register</h2>
           <form onSubmit={this.handleSubmit}>
             <div className="form-group">

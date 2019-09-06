@@ -72,7 +72,7 @@ class Login extends Component {
             </button>
           </div>
         )}
-        <section id="login" className="col-md-6 offset-md-3">
+        <section id="login" className="col-md-4 offset-md-4">
           <h2 className="mb-4">Login</h2>
           <form onSubmit={this.handleSubmit}>
             <div className="form-group">
