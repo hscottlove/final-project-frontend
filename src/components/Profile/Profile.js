@@ -6,36 +6,36 @@ class Profile extends Component {
 render() {
     return (
        <>
-            <section class="video-header">
-                <div class="row">
-                    <div class="col-md-12 text-center mt-4">
-                        <h1 class="display-4">Profile</h1>
-                        <p class="lead">Welcome to the team!</p>
-                        <hr class="divider" />
+            <section className="video-header">
+                <div className="row">
+                    <div className="col-md-12 text-center mt-4">
+                        <h1 className="display-4">Profile</h1>
+                        <p className="lead">Welcome to the team!</p>
+                        <hr className="divider" />
                     </div>
                 </div>
             </section>
 
-            <section class="video-section mb-4">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 text-center">
-                            <img src={ProfileImg} alt="profile-img" width="200px" class="img-thumbnail" />
+            <section className="video-section mb-4">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-12 text-center">
+                            <img src={ProfileImg} alt="profile-img" width="200px" className="img-thumbnail" />
                             <h3>Scott L.</h3>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section class="feed-section">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-8 offset-md-2">
-                                <div class="card">
-                                    <img src={Halo2PostImg} class="card-img-top" alt="Halo 2" />
-                                    <div class="card-body">
+            <section className="feed-section">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-md-8 offset-md-2">
+                                <div className="card">
+                                    <img src={Halo2PostImg} className="card-img-top" alt="Halo 2" />
+                                    <div className="card-body">
                                         <h3>Game: Halo 2</h3>
-                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit
+                                        <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit
                                             accusantium recusandae iure aliquam perspiciatis mollitia obcaecati aut libero,
                                             dignissimos
                                 dolorum rerum eveniet non odit molestias quasi omnis asperiores! Quod, eaque?</p>

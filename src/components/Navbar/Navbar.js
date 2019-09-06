@@ -73,12 +73,12 @@ import Logo from './images/Logo-w-60.png'
           </li>
      
           <li className="nav-item dropdown">
-              <div className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Account
-              </div>
+              </a>
               <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                 <NavLink className="dropdown-item" to="/profile">Profile</NavLink>
-                <NavLink className="dropdown-item" to="/">Sign Out</NavLink>
+                <NavLink className="dropdown-item" to="/" onClick={logout}>Sign Out</NavLink>
               </div>
             </li>
 
