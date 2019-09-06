@@ -82,9 +82,9 @@ import Logo from './images/Logo-w-60.png'
               </div>
             </li>
 
-        <li className="nav-item">
+        {/* <li className="nav-item">
           <span className="nav-link" style={{cursor: 'pointer'}} onClick={logout}>Logout</span>
-        </li>
+        </li> */}
       </>
     );
   
