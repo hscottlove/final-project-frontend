@@ -8,7 +8,7 @@ class Feed extends Component {
       <>
 
 
-        <div className="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div className="modal fade" id="exampleModalCenter" tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
           <div className="modal-dialog modal-dialog-centered" role="document">
             <div className="modal-content">
               <div className="modal-header">
@@ -18,15 +18,15 @@ class Feed extends Component {
                 </button>
               </div>
               <div className="modal-body">
-                <div classNameName="row">
-                  <div classNameName="col-md-12">
+                <div className="row">
+                  <div className="col-md-12">
                     <form>
                       <div className="form-group">
-                        <label for="exampleInputName">Game:</label>
+                        <label htmlFor="exampleInputName">Game:</label>
                         <input type="text" className="form-control" id="exampleInputName" aria-describedby="nameHelp" />
                       </div>
                       <div className="form-group">
-                        <label for="exampleFormControlTextarea1">Description:</label>
+                        <label htmlFor="exampleFormControlTextarea1">Description:</label>
                         <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Share here..."></textarea>
                       </div>
                       <button type="submit" className="btn btn-primary">Post</button>
