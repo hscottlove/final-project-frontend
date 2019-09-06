@@ -3,94 +3,94 @@ import FeedHeroImg from './images/banner-img-4.png';
 import Halo2PostImg from './images/halo2.jpg';
 
 class Feed extends Component {
-    render() {
-        return (
-            <>
+  render() {
+    return (
+      <>
 
 
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalCenterTitle">Add Post</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-      <div className="row">
-          <div className="col-md-12">
-            <form>
-              <div class="form-group">
-                <label for="exampleInputName">Game:</label>
-                <input type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp" />
+        <div className="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div className="modal-dialog modal-dialog-centered" role="document">
+            <div className="modal-content">
+              <div className="modal-header">
+                <h5 className="modal-title" id="exampleModalCenterTitle">Add Post</h5>
+                <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
               </div>
-             <div class="form-group">
-                <label for="exampleFormControlTextarea1">Description:</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Share here..."></textarea>
+              <div className="modal-body">
+                <div classNameName="row">
+                  <div classNameName="col-md-12">
+                    <form>
+                      <div className="form-group">
+                        <label for="exampleInputName">Game:</label>
+                        <input type="text" className="form-control" id="exampleInputName" aria-describedby="nameHelp" />
+                      </div>
+                      <div className="form-group">
+                        <label for="exampleFormControlTextarea1">Description:</label>
+                        <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Share here..."></textarea>
+                      </div>
+                      <button type="submit" className="btn btn-primary">Post</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div className="modal-footer">
+                {/* <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" className="btn btn-primary">Save changes</button> */}
+              </div>
             </div>
-              <button type="submit" class="btn btn-primary">Post</button>
-            </form>
           </div>
-        </div> 
-      </div>
-      <div class="modal-footer">
-        {/* <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button> */}
-      </div>
-    </div>
-  </div>
-</div>
+        </div>
 
-                <section class="video-hero-section">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <img src={FeedHeroImg} class="img-fluid test" alt="Hero-img" />
-                        </div>
-                    </div>
-                </section>
+        <section className="video-hero-section">
+          <div className="row">
+            <div className="col-md-12">
+              <img src={FeedHeroImg} className="img-fluid test" alt="Hero-img" />
+            </div>
+          </div>
+        </section>
 
-                <section class="video-header">
-                    <div class="row">
-                        <div class="col-md-12 text-center mt-4">
-                            <h1 class="display-4">Feed</h1>
-                            <p class="lead">Share your posts with our fellow gamers.</p>
-                            <hr class="divider" />
-                        </div>
-                    </div>
-                </section>
+        <section className="video-header">
+          <div className="row">
+            <div className="col-md-12 text-center mt-4">
+              <h1 className="display-4">Feed</h1>
+              <p className="lead">Share your posts with our fellow gamers.</p>
+              <hr className="divider" />
+            </div>
+          </div>
+        </section>
 
-                <section class="feed-button-section">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-8 offset-md-2 d-flex flex-row-reverse mb-3">
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Add Post  <i class="fas fa-plus-circle"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+        <section className="feed-button-section">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-8 offset-md-2 d-flex flex-row-reverse mb-3">
+                <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Add Post  <i className="fas fa-plus-circle"></i></button>
+              </div>
+            </div>
+          </div>
+        </section>
 
-                <section class="feed-section">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-8 offset-md-2">
-                                <div class="card">
-                                    <img src={Halo2PostImg} class="card-img-top" alt="Halo 2" />
-                                    <div class="card-body">
-                                        <h3>Game: Halo 2</h3>
-                                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit
-                                            accusantium recusandae iure aliquam perspiciatis mollitia obcaecati aut libero,
-                                            dignissimos
+        <section className="feed-section">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-8 offset-md-2">
+                <div className="card">
+                  <img src={Halo2PostImg} className="card-img-top" alt="Halo 2" />
+                  <div className="card-body">
+                    <h3>Game: Halo 2</h3>
+                    <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit
+                        accusantium recusandae iure aliquam perspiciatis mollitia obcaecati aut libero,
+                        dignissimos
                                 dolorum rerum eveniet non odit molestias quasi omnis asperiores! Quod, eaque?</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-            </>
-        )
-    }
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </>
+    )
+  }
 
 }
 
