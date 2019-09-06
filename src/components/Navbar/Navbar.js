@@ -1,6 +1,7 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import Logo from './images/Logo-w-60.png'
+import './Navbar.css';
  
 // class Navbar extends Component {
 //     render() {
@@ -73,12 +74,12 @@ import Logo from './images/Logo-w-60.png'
           </li>
      
           <li className="nav-item dropdown">
-              <a className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span className="nav-link dropdown-toggle dropdown" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Account
-              </a>
+              </span>
               <div className="dropdown-menu" aria-labelledby="navbarDropdown">
                 <NavLink className="dropdown-item" to="/profile">Profile</NavLink>
-                <NavLink className="dropdown-item" to="/" onClick={logout}>Sign Out</NavLink>
+                <span className="dropdown-item" onClick={logout}>Sign Out</span>
               </div>
             </li>
 
@@ -92,9 +93,9 @@ import Logo from './images/Logo-w-60.png'
      
  <nav className="navbar navbar-expand-lg navbar-light bg-light">
     <div className="container">
-      <div className="navbar-brand">
+      <NavLink className="navbar-brand" to="/">
         <img src={Logo} width="60" height="60" className="d-inline-block align-middle" alt="Kaiju Logo" />
-        Kaiju Gaming</div>
+        Kaiju Gaming</NavLink>
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav ml-auto">
         { currentUser ? authLinks : links }
