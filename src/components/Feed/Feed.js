@@ -3,11 +3,19 @@ import FeedHeroImg from './images/banner-img-4.png';
 import Halo2PostImg from './images/halo2.jpg';
 
 class Feed extends Component {
+  state = {
+    posts: [],
+  }
+
+  // GET POSTS FROM SERVER
+  componentDidMount() {
+    // MAKE AXIOS CALL FOR POSTS
+    // SET STATE WITH RESPONSE DATA
+  }
+
   render() {
     return (
       <>
-
-
         <div className="modal fade" id="exampleModalCenter" tabIndex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
           <div className="modal-dialog modal-dialog-centered" role="document">
             <div className="modal-content">

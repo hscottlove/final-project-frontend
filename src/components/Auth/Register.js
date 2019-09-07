@@ -111,11 +111,11 @@ class Register extends Component {
           <form onSubmit={this.handleSubmit}>
             <div className="form-group">
               <label htmlFor="username">Username</label>
-              <input type="username" id="username" name="username" value={this.state.username} onChange={this.handleChange} className="form-control form-control-lg" placeholder="SuperCool Guy"/>
+              <input type="username" id="username" name="username" value={this.state.username} onChange={this.handleChange} className="form-control form-control-lg" />
             </div>
             <div className="form-group">
               <label htmlFor="email">Email</label>
-              <input type="email" id="email" name="email" value={this.state.email} onChange={this.handleChange} className="form-control form-control-lg" placeholder="example@example.com"/>
+              <input type="email" id="email" name="email" value={this.state.email} onChange={this.handleChange} className="form-control form-control-lg" />
             </div>
             <div className="form-group">
               <label htmlFor="password">Password</label>

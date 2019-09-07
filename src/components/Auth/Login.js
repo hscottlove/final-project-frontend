@@ -51,7 +51,7 @@ class Login extends Component {
     const user = this.state;
     axios.post(`${API_URL}/auth/login`, user, { withCredentials: true })
       .then(res => {
-        console.log(res);
+        console.log(res.data);
         this.props.setCurrentUser(res.data.id);
         this.props.history.push('/profile');
       })
@@ -77,7 +77,7 @@ class Login extends Component {
           <form onSubmit={this.handleSubmit}>
             <div className="form-group">
               <label htmlFor="email">Email</label>
-              <input type="email" id="email" name="email" value={this.state.email} onChange={this.handleChange} className="form-control form-control-lg" placeholder="example@example.com"/>
+              <input type="email" id="email" name="email" value={this.state.email} onChange={this.handleChange} className="form-control form-control-lg" />
             </div>
             <div className="form-group">
               <label htmlFor="email">Password</label>
