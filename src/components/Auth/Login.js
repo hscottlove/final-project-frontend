@@ -73,7 +73,7 @@ class Login extends Component {
           </div>
         )}
         <section id="login" className="col-md-4 offset-md-4">
-          <h2 className="mb-4">Login</h2>
+          <h2 className="mb-4 mt-4">Login</h2>
           <form onSubmit={this.handleSubmit}>
             <div className="form-group">
               <label htmlFor="email">Email</label>

@@ -4,6 +4,7 @@ import GamingOneImg from './images/gaming-img-1.png';
 import GamingTwoImg from './images/gaming-img-2.png';
 import ThreeStarImg from './images/three-star-img.png';
 import FourStarImg from './images/four-star-img.png';
+import './Home.css';
 
 class Home extends Component {
     render() {
@@ -30,7 +31,7 @@ class Home extends Component {
                 </section>
 
                 <section className="news-section">
-                    <div className="container mt-4">
+                    <div className="container mt-5">
                         <div className="row">
                             <div className="col-md-6">
                                 <img src={GamingOneImg} className="img-fluid rounded" alt="Hero-img" />
@@ -50,15 +51,15 @@ class Home extends Component {
 
                         <div className="row mt-5">
                             <div className="col-md-6">
-                                <h1>Join our <span className="span-text">FREE</span> gaming community.</h1>
+                                <h1>Join our <span className="span-text"><u className="free-span">FREE</u></span> gaming community.</h1>
                                 <p className="lead">Share your gaming experience, or discover great games apart of the Kaiju community. When you sign up for Kaiju Gaming, you will have access to a variety of features. We encourage all topics revolving around gaming! Start today and post your favorite game.</p>
 
                                 <p className="lead">Members have access to:</p>
-                                <ul>
-                                    <li className="lead">Feed board</li>
-                                    <li className="lead">Messaging</li>
-                                    <li className="lead">Videos</li>
-                                    <li className="lead">Profile</li>
+                                <ul className="list-group list-group-flush mb-3">
+                                    <li className="list-group-item"><i className="fas fa-clipboard-list fa-lg mr-2"></i> Feed board</li>
+                                    <li className="list-group-item"><i className="fas fa-comment fa-lg mr-2"></i> Messaging</li>
+                                    <li className="list-group-item"><i className="fas fa-video fa-lg mr-2"></i> Videos</li>
+                                    <li className="list-group-item"><i className="fas fa-user fa-lg mr-2"></i> Profile</li>
                                 </ul>
                             </div>
                             <div className="col-md-6">
