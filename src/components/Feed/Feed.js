@@ -37,15 +37,18 @@ class Feed extends Component {
                         <label htmlFor="exampleFormControlTextarea1">Description:</label>
                         <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Share here..."></textarea>
                       </div>
-                      <button type="submit" className="btn btn-primary">Post</button>
+                      <div className="d-flex justify-content-end">
+                        <button type="submit" className="btn btn-primary">Submit</button>
+                      </div>
+                      
                     </form>
                   </div>
                 </div>
               </div>
-              <div className="modal-footer">
-                {/* <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" className="btn btn-primary">Save changes</button> */}
-              </div>
+              {/* <div>
+                <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" className="btn btn-primary">Save changes</button>
+              </div> */}
             </div>
           </div>
         </div>
