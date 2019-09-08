@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import ProfileImg from '../components/Profile/images/profile-img.png';
+// import ProfileImg from '../components/Profile/images/profile-img.png';
 import Halo2PostImg from '../components/Profile/images/halo2.jpg';
 import axios from 'axios';
 // import Profile from '../components/Profile/Profile';
 import { API_URL } from '../constants';
+import './ProfileContainer.css';
+
 
 
 class ProfileContainer extends Component {
@@ -39,7 +41,7 @@ class ProfileContainer extends Component {
                     <div className="container">
                         <div className="row">
                             <div className="col-md-12 text-center">
-                                <img src={ProfileImg} alt="profile-img" width="200px" className="img-thumbnail" />
+                                <img src={this.state.user.profileimage} alt="profile-img" width="200px" className="img-thumbnail profile-img" />
                                 <h3>{this.state.user.username}</h3>
                             </div>
                         </div>
