@@ -1,17 +1,49 @@
 import React, { Component } from 'react';
 import FeedHeroImg from './images/banner-img-4.png';
 import Halo2PostImg from './images/halo2.jpg';
+import axios from 'axios';
+import { API_URL } from '../../constants';
 
 class Feed extends Component {
   state = {
     posts: [],
+    postimage: '',
+    game: '',
+    description: '',
   }
+
+  handleChange = (event) => {
+    this.setState({
+      [event.target.name]: event.target.value,
+    });
+  };
+
+  handleSubmit = (event) => {
+    event.preventDefault();
+   
+    axios.get('http://localhost:4000/api/v1/posts')
+      .then((response) => {
+        console.log(response.data)
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+  };
 
   // GET POSTS FROM SERVER
   componentDidMount() {
-    // MAKE AXIOS CALL FOR POSTS
-    // SET STATE WITH RESPONSE DATA
+  
+  axios.get('http://localhost:4000/api/v1/posts')
+    .then((response) => {
+      console.log(response.data)
+    })
+    .catch((error) => {
+      console.log(error)
+    })
   }
+
+  // MAKE AXIOS CALL FOR POSTS
+  // SET STATE WITH RESPONSE DATA
 
   render() {
     return (
@@ -28,19 +60,22 @@ class Feed extends Component {
               <div className="modal-body">
                 <div className="row">
                   <div className="col-md-12">
-                    <form>
+                    <form onSubmit={this.handleSubmit}>
                       <div className="form-group">
-                        <label htmlFor="exampleInputName">Game:</label>
-                        <input type="text" className="form-control" id="exampleInputName" aria-describedby="nameHelp" />
+                        <label htmlFor="postimage">Image</label>
+                        <input type="postimage" id="postimage" name="postimage" value={this.state.postimage} onChange={this.handleChange} className="form-control form-control-lg" />
                       </div>
                       <div className="form-group">
-                        <label htmlFor="exampleFormControlTextarea1">Description:</label>
-                        <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Share here..."></textarea>
+                        <label htmlFor="game">Game</label>
+                        <input type="game" id="game" name="game" value={this.state.game} onChange={this.handleChange} className="form-control form-control-lg" />
+                      </div>
+                      <div className="form-group">
+                        <label htmlFor="description">Description</label>
+                        <input type="description" id="description" name="description" value={this.state.description} onChange={this.handleChange} className="form-control form-control-lg" />
                       </div>
                       <div className="d-flex justify-content-end">
                         <button type="submit" className="btn btn-primary">Submit</button>
                       </div>
-                      
                     </form>
                   </div>
                 </div>
@@ -89,6 +124,7 @@ class Feed extends Component {
                   <img src={Halo2PostImg} className="card-img-top" alt="Halo 2" />
                   <div className="card-body">
                     <h3>Game: Halo 2</h3>
+                    <h3>{this.state.posts.game}</h3>
                     <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit
                         accusantium recusandae iure aliquam perspiciatis mollitia obcaecati aut libero,
                         dignissimos
