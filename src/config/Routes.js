@@ -6,6 +6,7 @@ import Register from '../components/Auth/Register';
 import Feed from '../components/Feed/Feed';
 import Videos from '../components/Videos/Videos';
 import Profile from '../components/Profile/Profile';
+import ProfileContainer from '../containers/ProfileContainer';
 
 
 
@@ -37,7 +38,7 @@ export default withRouter(({ setCurrentUser, currentUser, history }) => {
         <Route path='/register' component={Register} />
         <PrivateRoute path='/feed' component={Feed} />
         <PrivateRoute path='/videos' component={Videos} />
-        <PrivateRoute path='/profile' component={Profile} />
+        <PrivateRoute path='/profile' component={ProfileContainer} />
       </Switch>
     );
   });
