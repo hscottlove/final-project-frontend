@@ -71,6 +71,7 @@ import { API_URL } from '../../constants';
 class Register extends Component {
   state = {
     username: '',
+    image: '',
     email: '',
     password: '',
     password2: '',
@@ -112,6 +113,10 @@ class Register extends Component {
             <div className="form-group">
               <label htmlFor="username">Username</label>
               <input type="username" id="username" name="username" value={this.state.username} onChange={this.handleChange} className="form-control form-control-lg" />
+            </div>
+            <div className="form-group">
+              <label htmlFor="userimg">Image</label>
+              <input type="userimg" id="userimg" name="userimg" value={this.state.image} onChange={this.handleChange} className="form-control form-control-lg" />
             </div>
             <div className="form-group">
               <label htmlFor="email">Email</label>

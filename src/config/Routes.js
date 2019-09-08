@@ -5,7 +5,7 @@ import Login from '../components/Auth/Login';
 import Register from '../components/Auth/Register';
 import Feed from '../components/Feed/Feed';
 import Videos from '../components/Videos/Videos';
-import Profile from '../components/Profile/Profile';
+// import Profile from '../components/Profile/Profile';
 import ProfileContainer from '../containers/ProfileContainer';
 
 
