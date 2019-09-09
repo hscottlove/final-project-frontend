@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import FeedHeroImg from './images/banner-img-4.png';
-import Halo2PostImg from './images/halo2.jpg';
+// import Halo2PostImg from './images/halo2.jpg';
 import axios from 'axios';
-import { API_URL } from '../../constants';
+// import { API_URL } from '../../constants';
 
 class Feed extends Component {
   state = {
@@ -20,28 +20,37 @@ class Feed extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-   
-    axios.get('http://localhost:4000/api/v1/posts')
-      .then((response) => {
-        console.log(response.data)
+    const newPost = {
+      description: this.state.description,
+      game: this.state.game,
+      postimage: this.state.postimage,
+    }
+
+    axios.post('http://localhost:4000/api/v1/posts', newPost, { withCredentials: true })
+      .then(res => {
+        console.log(res);
+        this.setState(prevState => ({
+          posts: [...prevState.posts, res.data.data]
+        }));
       })
       .catch((error) => {
         console.log(error)
       })
   };
 
+
   // GET POSTS FROM SERVER
   componentDidMount() {
-  
-  axios.get('http://localhost:4000/api/v1/posts')
-    .then((response) => {
-      console.log(response.data)
-    })
-    .catch((error) => {
-      console.log(error)
-    })
-  }
+    axios.get('http://localhost:4000/api/v1/posts', { withCredentials: true })
+      .then((response) => {
+        console.log(response.data.data)
+        this.setState({ posts: response.data.data })
+      })
+      .catch((error) => {
+        console.log(error)
+      })
 
+  }
   // MAKE AXIOS CALL FOR POSTS
   // SET STATE WITH RESPONSE DATA
 
@@ -118,13 +127,33 @@ class Feed extends Component {
 
         <section className="feed-section">
           <div className="container">
-            <div className="row">
+
+          { this.state.posts.map(post => {
+            return (
+              <div key={post._id} className="row mb-5">
+                <div className="col-md-8 offset-md-2">
+                  <div className="card">
+                    <img src={post.postimage} className="card-img-top" alt="Halo 2" />
+                    <div className="card-body">
+                      <h3>Game: Halo 2</h3>
+                      <h3>{post.game}</h3>
+                      <p className="card-text">{post.description}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )
+          }) }
+          
+
+
+            {/* <div className="row">
               <div className="col-md-8 offset-md-2">
                 <div className="card">
                   <img src={Halo2PostImg} className="card-img-top" alt="Halo 2" />
                   <div className="card-body">
                     <h3>Game: Halo 2</h3>
-                    <h3>{this.state.posts.game}</h3>
+                    <h3>{this.state.game}</h3>
                     <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit
                         accusantium recusandae iure aliquam perspiciatis mollitia obcaecati aut libero,
                         dignissimos
@@ -132,7 +161,11 @@ class Feed extends Component {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
+
+
+
+
           </div>
         </section>
       </>
