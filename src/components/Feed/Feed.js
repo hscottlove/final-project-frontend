@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import FeedHeroImg from './images/banner-img-4.png';
 // import Halo2PostImg from './images/halo2.jpg';
 import axios from 'axios';
+import { API_URL } from '../../constants';
 // import { API_URL } from '../../constants';
 
 class Feed extends Component {
@@ -51,6 +52,36 @@ class Feed extends Component {
       })
 
   }
+
+  // deletePost = (id) => {
+  //  axios.delete(`${API_URL}/posts/${id}`, { withCredentials: true})
+  //  .then((res) => {
+  //       let posts = this.state.posts.filter(function(post) {
+  //         return post._id !== res.data._id
+  //       });
+  //       this.setState({posts})
+  //   })
+  // }
+
+  deletePost = (id) => {
+    axios.delete(`${API_URL}/posts/${id}`, { withCredentials: true})
+    .then((res) => {
+      this.setState({
+        posts: this.state.posts.filter((post) => post._id !== id )
+      })
+      console.log('removed');
+     }).then().catch(err => console.log(err))
+   }
+
+  // delete = (id) => {
+  //   axios.deletePost(`${API_URL}/posts/${id}`, { withCredentials: true}).then((res) => {
+  //       let posts = this.state.posts.filter(function(id) {
+  //         return posts._id !== res.data._id
+  //       });
+  //       this.setState({posts})
+  //   })
+  // };
+
   // MAKE AXIOS CALL FOR POSTS
   // SET STATE WITH RESPONSE DATA
 
@@ -135,9 +166,11 @@ class Feed extends Component {
                   <div className="card">
                     <img src={post.postimage} className="card-img-top" alt="Halo 2" />
                     <div className="card-body">
-                      <h3>Game: Halo 2</h3>
                       <h3>{post.game}</h3>
                       <p className="card-text">{post.description}</p>
+                      {/* <button onClick={()=>this.deletePost(post._id)}>Delete</button> */}
+                      <button onClick={()=>this.deletePost(post._id)} type="button" className="btn btn-danger">Delete</button>
+                      <button type="button" className="btn btn-secondary">Edit</button>
                     </div>
                   </div>
                 </div>
