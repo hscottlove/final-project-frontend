@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import FeedHeroImg from './images/banner-img-4.png';
-// import Halo2PostImg from './images/halo2.jpg';
 import axios from 'axios';
 import { API_URL } from '../../constants';
 // import { API_URL } from '../../constants';
@@ -39,7 +38,6 @@ class Feed extends Component {
       })
   };
 
-
   // GET POSTS FROM SERVER
   componentDidMount() {
     axios.get('http://localhost:4000/api/v1/posts', { withCredentials: true })
@@ -53,16 +51,6 @@ class Feed extends Component {
 
   }
 
-  // deletePost = (id) => {
-  //  axios.delete(`${API_URL}/posts/${id}`, { withCredentials: true})
-  //  .then((res) => {
-  //       let posts = this.state.posts.filter(function(post) {
-  //         return post._id !== res.data._id
-  //       });
-  //       this.setState({posts})
-  //   })
-  // }
-
   deletePost = (id) => {
     axios.delete(`${API_URL}/posts/${id}`, { withCredentials: true})
     .then((res) => {
@@ -73,17 +61,38 @@ class Feed extends Component {
      }).then().catch(err => console.log(err))
    }
 
-  // delete = (id) => {
-  //   axios.deletePost(`${API_URL}/posts/${id}`, { withCredentials: true}).then((res) => {
-  //       let posts = this.state.posts.filter(function(id) {
-  //         return posts._id !== res.data._id
-  //       });
-  //       this.setState({posts})
-  //   })
-  // };
+  //  updatePost = (event) => {
+  //   event.preventDefault();
+  //   const editPost = {
+  //     description: this.state.description,
+  //     game: this.state.game,
+  //     postimage: this.state.postimage,
+  //   }
+  //   console.log(editPost);
+  //   axios.put('http://localhost:4000/api/v1/posts{this.state.id}', editPost)
+  //   .then(res => console.log(res.data));
+  // }
 
-  // MAKE AXIOS CALL FOR POSTS
-  // SET STATE WITH RESPONSE DATA
+  editPost = (event) => {
+    event.preventDefault();
+    const editPost = {
+      description: this.state.description,
+      game: this.state.game,
+      postimage: this.state.postimage,
+    }
+
+    axios.put('http://localhost:4000/api/v1/posts', editPost, { withCredentials: true })
+      .then(res => {
+        console.log(res);
+        this.setState(prevState => ({
+          posts: [...prevState.posts, res.data.data]
+        }));
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+  };
+
 
   render() {
     return (
@@ -120,10 +129,6 @@ class Feed extends Component {
                   </div>
                 </div>
               </div>
-              {/* <div>
-                <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" className="btn btn-primary">Save changes</button>
-              </div> */}
             </div>
           </div>
         </div>
@@ -168,43 +173,19 @@ class Feed extends Component {
                     <div className="card-body">
                       <h3>{post.game}</h3>
                       <p className="card-text">{post.description}</p>
-                      {/* <button onClick={()=>this.deletePost(post._id)}>Delete</button> */}
-                      <button onClick={()=>this.deletePost(post._id)} type="button" className="btn btn-danger">Delete</button>
-                      <button type="button" className="btn btn-secondary">Edit</button>
+                      <button onClick={()=>this.deletePost(post._id)} type="button" className="btn btn-danger mr-2">Delete</button>
+                      <button onClick={()=>this.editPost()} type="button" className="btn btn-secondary">Edit</button>
                     </div>
                   </div>
                 </div>
               </div>
             )
           }) }
-          
-
-
-            {/* <div className="row">
-              <div className="col-md-8 offset-md-2">
-                <div className="card">
-                  <img src={Halo2PostImg} className="card-img-top" alt="Halo 2" />
-                  <div className="card-body">
-                    <h3>Game: Halo 2</h3>
-                    <h3>{this.state.game}</h3>
-                    <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit
-                        accusantium recusandae iure aliquam perspiciatis mollitia obcaecati aut libero,
-                        dignissimos
-                                dolorum rerum eveniet non odit molestias quasi omnis asperiores! Quod, eaque?</p>
-                  </div>
-                </div>
-              </div>
-            </div> */}
-
-
-
-
           </div>
         </section>
       </>
     )
   }
-
 }
 
 export default Feed;
