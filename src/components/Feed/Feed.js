@@ -39,7 +39,6 @@ class Feed extends Component {
       })
   };
 
-  // GET POSTS FROM SERVER
   componentDidMount() {
     axios.get('http://localhost:4000/api/v1/posts', { withCredentials: true })
       .then((response) => {
@@ -49,7 +48,6 @@ class Feed extends Component {
       .catch((error) => {
         console.log(error)
       })
-
   }
 
   deletePost = (id) => {
@@ -107,7 +105,6 @@ class Feed extends Component {
       isEditing: !prevState.isEditing,
     }));
   };
-
 
   render() {
     return (
@@ -215,8 +212,7 @@ class Feed extends Component {
                         </div>
                       </form>
                     }
-
-
+                    
                   </div>
                 </div>
               </div>

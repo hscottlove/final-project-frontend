@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-// import ProfileImg from '../components/Profile/images/profile-img.png';
 import Halo2PostImg from '../components/Profile/images/halo2.jpg';
 import axios from 'axios';
-// import Profile from '../components/Profile/Profile';
 import { API_URL } from '../constants';
 import './ProfileContainer.css';
 
@@ -22,7 +20,6 @@ class ProfileContainer extends Component {
           })
           .catch(err => console.log(err));
       };
-
 
     render() {
         return (
@@ -62,7 +59,6 @@ class ProfileContainer extends Component {
                                     dolorum rerum eveniet non odit molestias quasi omnis asperiores! Quod, eaque?</p>
                                     </div>
                                 </div>
-                                {/* <Profile user={this.state.user} /> */}
                             </div>
                         </div>
                     </div>
@@ -70,7 +66,6 @@ class ProfileContainer extends Component {
             </>
         )
     }
-
 }
 
 export default ProfileContainer;
