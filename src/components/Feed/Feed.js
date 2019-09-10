@@ -10,6 +10,7 @@ class Feed extends Component {
     postimage: '',
     game: '',
     description: '',
+    isEditing: false,
   }
 
   handleChange = (event) => {
@@ -61,19 +62,8 @@ class Feed extends Component {
      }).then().catch(err => console.log(err))
    }
 
-  //  updatePost = (event) => {
-  //   event.preventDefault();
-  //   const editPost = {
-  //     description: this.state.description,
-  //     game: this.state.game,
-  //     postimage: this.state.postimage,
-  //   }
-  //   console.log(editPost);
-  //   axios.put('http://localhost:4000/api/v1/posts{this.state.id}', editPost)
-  //   .then(res => console.log(res.data));
-  // }
-
-  editPost = (event) => {
+   updatePost = (event, id) => {
+    // console.log(id);
     event.preventDefault();
     const editPost = {
       description: this.state.description,
@@ -81,16 +71,41 @@ class Feed extends Component {
       postimage: this.state.postimage,
     }
 
-    axios.put('http://localhost:4000/api/v1/posts', editPost, { withCredentials: true })
+    axios.put(`${API_URL}/posts/${id}`, editPost, { withCredentials: true })
       .then(res => {
         console.log(res);
-        this.setState(prevState => ({
-          posts: [...prevState.posts, res.data.data]
-        }));
+        
+        const filteredPosts = this.state.posts.filter(post => {
+          return post._id !== id;
+        });
+
+        filteredPosts.push(res.data.data);
+
+        this.setState({
+          posts: filteredPosts,
+          postimage: '',
+          game: '',
+          description: '',
+          isEditing: false,
+        });
       })
       .catch((error) => {
         console.log(error)
       })
+  }
+
+  editPost = (id) => {
+
+    const foundPost = this.state.posts.find(post => {
+      return post._id === id;
+    });
+
+    this.setState(prevState => ({
+      postimage: foundPost.postimage,
+      game: foundPost.game,
+      description: foundPost.description,
+      isEditing: !prevState.isEditing,
+    }));
   };
 
 
@@ -164,6 +179,7 @@ class Feed extends Component {
         <section className="feed-section">
           <div className="container">
 
+
           { this.state.posts.map(post => {
             return (
               <div key={post._id} className="row mb-5">
@@ -174,8 +190,33 @@ class Feed extends Component {
                       <h3>{post.game}</h3>
                       <p className="card-text">{post.description}</p>
                       <button onClick={()=>this.deletePost(post._id)} type="button" className="btn btn-danger mr-2">Delete</button>
-                      <button onClick={()=>this.editPost()} type="button" className="btn btn-secondary">Edit</button>
+                      <button onClick={() => this.editPost(post._id)} type="button" className="btn btn-secondary">
+                        { this.state.isEditing ? 'Cancel' : 'Edit' }
+                      </button>
                     </div>
+
+
+                    { this.state.isEditing &&
+                      <form onSubmit={(event) => this.updatePost(event, post._id)} className="p-3">
+                        <div className="form-group">
+                          <label htmlFor="postimage">Image</label>
+                          <input type="postimage" id="postimage" name="postimage" value={this.state.postimage} onChange={this.handleChange} className="form-control form-control-lg" />
+                        </div>
+                        <div className="form-group">
+                          <label htmlFor="game">Game</label>
+                          <input type="game" id="game" name="game" value={this.state.game} onChange={this.handleChange} className="form-control form-control-lg" />
+                        </div>
+                        <div className="form-group">
+                          <label htmlFor="description">Description</label>
+                          <input type="description" id="description" name="description" value={this.state.description} onChange={this.handleChange} className="form-control form-control-lg" />
+                        </div>
+                        <div className="d-flex justify-content-end">
+                          <button type="submit" className="btn btn-primary">Submit</button>
+                        </div>
+                      </form>
+                    }
+
+
                   </div>
                 </div>
               </div>
