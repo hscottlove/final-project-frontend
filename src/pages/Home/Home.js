@@ -1,77 +1,76 @@
 import React, { Component } from 'react';
-import HeroImg from './images/banner-img-1.png';
+import HomeHeroImg from './images/banner-img-1.png';
+import GamingOneImg from './images/gaming-img-1.png';
+import GamingTwoImg from './images/gaming-img-2.png';
+import ThreeStarImg from './images/three-star-img.png';
+import FourStarImg from './images/four-star-img.png';
+import './Home.css';
 
 class Home extends Component {
-render() {
-    return (
-        <>
-        <section class="home-hero-section">
+    render() {
+        return (
+            <>
+                <section className="home-hero-section">
+                    <div className="row">
+                        <div className="col-md-12">
+                            <div className="div">
+                                <img src={HomeHeroImg} className="img-fluid" alt="Hero-img" />
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-        <div class="row">
-          <div class="col-md-12">
-            <div class="div">
-              <img src={HeroImg} class="img-fluid" alt="Hero-img" />
-            </div>
-          </div>
-        </div>
-       
-    
-      </section>
-    
-      <section class="header-section">
-        <div class="row">
-          <div class="col-md-12 text-center mt-4">
-            <h1 class="display-4">Play to Win.</h1>
-            
-            <p class="lead">Gamers dont die they respawn</p>
-            <hr class="divider"/>
-          </div>
-        </div>
-      </section>
-    
-      <section class="news-section">
-        <div class="container mt-4">
-          <div class="row">
-            <div class="col-md-6">
-              <img src="./images/gaming-img-1.png" class="img-fluid rounded" alt="Hero-img" />
-            </div>
-            <div class="col-md-6">
-              <h2 class="featurette-heading">Latest Games. <span class="span-text">PC</span></h2>
-              <p class="lead">Looking for the latest games for the PC check this list.</p>
-              <ul class="list-group list-group-flush">
-                <li class="list-group-item">Counter-Strike <img src="images/4star.png" alt="star-rating-1" width="50" /></li>
-                <li class="list-group-item">Rainbow Six Siege <img src="images/4star.png" alt="star-rating-2" width="50" /></li>
-                <li class="list-group-item">Call of Duty <img src="images/3star.png" alt="star-rating-3" width="40" /></li>
-                <li class="list-group-item">Overwatch <img src="images/3star.png" alt="star-rating-4" width="40" /></li>
-                <li class="list-group-item">Half-Life <img src="images/1star.png" alt="star-rating-5" width="15" /></li>
-              </ul>
-            </div>
-          </div>
-    
-    
-    
-          <div class="row mt-5">
-            <div class="col-md-6">
-              <h1>Join our <span class="span-text">FREE</span> gaming community.</h1>
-              <p>Discover great games in the Kaiju community. When you sign up, we provide a variety of gaming content for active players seeking to share their experience!</p>
-    
-              <p>User who sign up have access to:</p>
-              <ul>
-                <li>Feed Content</li>
-                <li>Message Board</li>
-                <li>Videos</li>
-                <li>Profile</li>
-              </ul>
-            </div>
-            <div class="col-md-6">
-              <img src="./images/gaming-img-3.png" class="img-fluid rounded" alt="Hero-img" />
-            </div>
-          </div>
-        </div>
-      </section>
-      </>
-    )
-}
+                <section className="header-section">
+                    <div className="row">
+                        <div className="col-md-12 text-center mt-4">
+                            <h1 className="display-4">Play to Win.</h1>
+                            <p className="lead">Gamers dont die they respawn</p>
+                            <hr className="divider" />
+                        </div>
+                    </div>
+                </section>
+
+                <section className="news-section">
+                    <div className="container mt-5">
+                        <div className="row">
+                            <div className="col-md-6">
+                                <img src={GamingOneImg} className="img-fluid rounded" alt="Hero-img" />
+                            </div>
+                            <div className="col-md-6">
+                                <h2 className="featurette-heading">Looking for a new game?</h2>
+                                <p className="lead">Our community recommends.</p>
+                                <ul className="list-group list-group-flush">
+                                    <li className="list-group-item">Counter-Strike <img src={FourStarImg} alt="star-rating-1" width="50" /></li>
+                                    <li className="list-group-item">Rainbow Six Siege <img src={FourStarImg} alt="star-rating-2" width="50" /></li>
+                                    <li className="list-group-item">Call of Duty <img src={FourStarImg} alt="star-rating-3" width="50" /></li>
+                                    <li className="list-group-item">Overwatch <img src={ThreeStarImg} alt="star-rating-4" width="40" /></li>
+                                    <li className="list-group-item">Skyrim <img src={ThreeStarImg} alt="star-rating-5" width="40" /></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div className="row mt-5">
+                            <div className="col-md-6">
+                                <h1>Join our <span className="span-text"><u className="free-span">FREE</u></span> gaming community.</h1>
+                                <p className="lead">Share your gaming experience, or discover great games apart of the Kaiju community. When you sign up for Kaiju Gaming, you will have access to a variety of features. We encourage all topics revolving around gaming! Start today and post your favorite game.</p>
+
+                                <p className="lead">Members have access to:</p>
+                                <ul className="list-group list-group-flush mb-3">
+                                    <li className="list-group-item"><i className="fas fa-clipboard-list fa-lg mr-2"></i> Feed board</li>
+                                    <li className="list-group-item"><i className="fas fa-comment fa-lg mr-2"></i> Messaging</li>
+                                    <li className="list-group-item"><i className="fas fa-video fa-lg mr-2"></i> Videos</li>
+                                    <li className="list-group-item"><i className="fas fa-user fa-lg mr-2"></i> Profile</li>
+                                </ul>
+                            </div>
+                            <div className="col-md-6">
+                                <img src={GamingTwoImg} className="img-fluid rounded" alt="Hero-img" />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </>
+        )
+    }
 
 }
 
