@@ -3,7 +3,7 @@ Kaiju Gaming is a platform for gamers to connect with their friends and gaming c
 
 A gaming app that connects gamers around the world to share their gaming experience.
 
-
+## ERD
 
 ## Wireframes
 ![Homepage](https://user-images.githubusercontent.com/42482471/64654329-c6ea7c80-d3dd-11e9-92dc-cbf2f38e428f.png)
