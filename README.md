@@ -1,7 +1,6 @@
+![Logo-w-60](https://user-images.githubusercontent.com/42482471/64670523-4a29c380-d41a-11e9-8826-c89cea587551.png)
 ## Kaiju Gaming
-Kaiju Gaming is a platform for gamers to connect with their friends and gaming communities.
-
-A gaming app that connects gamers around the world to share their gaming experience.
+Kaiju Gaming is a gaming app that connects gamers around the world to share their gaming experience.
 
 ## ERD
 ![ERD](https://user-images.githubusercontent.com/42482471/64659264-9dd2e780-d3ef-11e9-859c-2820f64f84b7.png)
