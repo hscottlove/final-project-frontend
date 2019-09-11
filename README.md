@@ -32,3 +32,8 @@ MERN Stack
 
 ![Edit-post](https://user-images.githubusercontent.com/42482471/64654382-f0a3a380-d3dd-11e9-8ee0-790d77e2428e.png)
 
+## User Story
+- A user wants to brag about his/her gaming experience to other gamers.
+- The user visits Kaiju Gaming and registers.
+- Once the user signs up, they will have access to the feed, video, and profile section.
+- Now you can post to the feed section about your gaming experience.
