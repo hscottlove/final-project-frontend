@@ -10,6 +10,12 @@ MERN Stack
 - Node
 - Bootstrap
 
+## installation steps
+- Clone repos front/back
+- npm i dependencies
+- Frontend npm start
+- Backend mongod / nodemon
+
 ## ERD
 ![ERD](https://user-images.githubusercontent.com/42482471/64659264-9dd2e780-d3ef-11e9-859c-2820f64f84b7.png)
 
