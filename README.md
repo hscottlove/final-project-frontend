@@ -2,6 +2,13 @@
 ## Kaiju Gaming
 Kaiju Gaming is a gaming app that connects gamers around the world to share their gaming experience.
 
+## Project Links
+Frontend:
+https://github.com/hscottlove/final-project-frontend
+
+Backend:
+https://github.com/hscottlove/final-project-backend
+
 ## technologies used
 MERN Stack
 - MongoDB
